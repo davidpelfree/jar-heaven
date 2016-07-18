@@ -1,0 +1,21 @@
+1. Choose some interesting know thrid party tool (challenging ones are: xerces, slf4j, xstream, jaxb, ...)
+
+2. Start with pom.xml - analyze dependencies and get all dependent jars. Reference: http://maven.apache.org/plugins/maven-dependency-plugin/
+
+3. Analyze each jar: 
+    analyze and cache meta data (jar name, date, info from its Manifest file)
+    analyze and cache jar's Maven meta data (group ID, artifact name, artifact version, modifier - if exists)
+    for each file (not only classes, but also normal files, like log4j.properties): 
+        write data to classes.csv file (see docs/example-classes.csv in this project)
+
+4. GUI: create a static HTML single page application, visualizing data from classes.csv file. Could be table based or graph based. Allow search and filter.
+
+5. Conflict analysis: 
+    (load CSV files to HSQLDB or H2 embedded database for easy SQL based analysis)
+    a. Most trivial - find duplicate classes (with different md5 hash, otherwise they are the same and could be ignored)
+    b. Advanced: discover wrong specification-implementation versions by comparing MD5 of "javap"'s output of the class.
+    
+6. Suggest pom fixes:
+    - exclude transitive dependencies (or make them "provided" instead of "compile" scope)
+    - move dependencies up the hierarchy (of same groupID/artifactName), since Maven defines resolves version conflicts according to dependency tree depth 
+    - repackage dependent jar - drop some classes / files to avoid a conflict - as a last choice
