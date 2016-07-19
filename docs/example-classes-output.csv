@@ -1,0 +1,4 @@
+CLASS_NAME,MVN_ARTIFACT_NAME,MVN_ARTIFACT_PATH
+org.apache.log4j.Logger,log4j:log4j:1.2.9,com.my:artifact:1.0/log4j:log4j:1.2.9
+org.apache.log4j.Priority,log4j:log4j:1.2.9,com.my:artifact:1.0/log4j:log4j:1.2.9
+org.apache.log4j.MDC,log4j:log4j:1.2.9,com.my:artifact:1.0/log4j:log4j:1.2.9
