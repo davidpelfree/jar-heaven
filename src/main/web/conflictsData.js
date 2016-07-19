@@ -3,7 +3,8 @@ var conflictsJson = {
 
         "artifacts": [
             {
-                "commons-lang:commons-lang:jar": [
+                "artifactName": "commons-lang:commons-lang:jar",
+                "listOfPairs": [
                     {
                         "version": "2.4",
                         "path": "org.apache.hadoop:hadoop-common:jar:2.6.0-cdh5.5.0/commons-configuration:commons-configuration:jar:1.6"
@@ -19,7 +20,8 @@ var conflictsJson = {
                 ]
             },
             {
-                "com.google.guava:guava:jar": [
+                "artifactName": "com.google.guava:guava:jar",
+                "listOfPairs": [
                     {
                         "version": "11.0.2",
                         "path": "org.apache.hadoop:hadoop-common:jar:2.6.0-cdh5.5.0"
@@ -40,7 +42,8 @@ var conflictsJson = {
                 ]
             },
             {
-                "commons-codec:commons-codec:jar": [
+                "artifactName": "commons-codec:commons-codec:jar",
+                "listOfPairs": [
                     {
                         "version": "1.4",
                         "path": "org.apache.hadoop:hadoop-common:jar:2.6.0-cdh5.5.0"
@@ -64,7 +67,8 @@ var conflictsJson = {
                 ]
             },
             {
-                "org.codehaus.jackson:jackson-core-asl:jar": [
+                "artifactName": "org.codehaus.jackson:jackson-core-asl:jar",
+                "listOfPairs": [
                     {
                         "version": "1.8.3",
                         "path": "org.apache.hadoop:hadoop-common:jar:2.6.0-cdh5.5.0/com.sun.jersey:jersey-json:jar:1.9"
@@ -96,7 +100,8 @@ var conflictsJson = {
                 ]
             },
             {
-                "org.codehaus.jackson:jackson-mapper-asl:jar": [
+                "artifactName": "org.codehaus.jackson:jackson-mapper-asl:jar",
+                "listOfPairs": [
                     {
                         "version": "1.8.3",
                         "path": "org.apache.hadoop:hadoop-common:jar:2.6.0-cdh5.5.0/com.sun.jersey:jersey-json:jar:1.9"
@@ -124,7 +129,8 @@ var conflictsJson = {
                 ]
             },
             {
-                "org.slf4j:slf4j-api:jar": [
+                "artifactName": "org.slf4j:slf4j-api:jar",
+                "listOfPairs": [
                     {
                         "version": "1.7.5",
                         "path": "org.apache.hadoop:hadoop-common:jar:2.6.0-cdh5.5.0"
@@ -168,7 +174,8 @@ var conflictsJson = {
                 ]
             },
             {
-                "org.apache.httpcomponents:httpclient:jar": [
+                "artifactName": "org.apache.httpcomponents:httpclient:jar",
+                "listOfPairs": [
                     {
                         "version": "4.1.2",
                         "path": "org.apache.hadoop:hadoop-common:jar:2.6.0-cdh5.5.0/net.java.dev.jets3t:jets3t:jar:0.9.0"
@@ -182,31 +189,33 @@ var conflictsJson = {
         ],
 
         "classes": [
-            {
-                "class1": [
                     {
-                        "artifact_name": "artifactName1",
-                        "path": "the/path/to/artifactName"
+                        "className": "class 2",
+                        "listOfPairs": [
+                            {
+                                "artifact_name": "artifactName1",
+                                "path": "the/path/to/artifactName"
+                            },
+                            {
+                                "artifact_name": "artifactName2",
+                                "path": "the/path/to/artifactName"
+                            },
+                            {
+                                "artifact_name": "artifactName3",
+                                "path": "the/path/to/artifactName"
+                            }
+                        ]
                     },
                     {
-                        "artifact_name": "artifactName2",
-                        "path": "the/path/to/artifactName"
-                    },
-                    {
-                        "artifact_name": "artifactName3",
-                        "path": "the/path/to/artifactName"
+                        "className": "class 3",
+                        "listOfPairs": [
+                            {
+                                "artifact_name": "artifactName2",
+                                "path": "the/path/to/artifactName"
+                            }
+                        ]
                     }
                 ]
-            },
-            {
-                "class2": [
-                    {
-                        "artifact_name": "artifactName2",
-                        "path": "the/path/to/artifactName"
-                    }
-                ]
-            }
-        ]
     }
 
 }
