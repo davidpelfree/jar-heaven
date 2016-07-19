@@ -3,19 +3,21 @@ var conflictsJson = {
 
         artifacts: [
             {
-                arifact1: [
+                artifactName: "art 1",
+                listOfPairs: [
                     {
                         version: "v1",
                         path: "the/path/to/jar"
                     },
-                    {
+                    {   
                         version: "v2",
                         path: "the/path/to/jar"
                     }
                 ]
             },
             {
-                arifact2: [
+                artifactName: "art 2",
+                listOfPairs: [
                     {
                         version: "v3",
                         path: "the/path/to/jar"
@@ -34,7 +36,8 @@ var conflictsJson = {
 
         classes: [
             {
-                class1: [
+                className: "class 2",
+                listOfPairs: [
                     {
                         artifact_name: "artifactName1",
                         path: "the/path/to/artifactName"
@@ -50,7 +53,8 @@ var conflictsJson = {
                 ]
             },
             {
-                class2: [
+                className: "class 3",
+                listOfPairs: [
                     {
                         artifact_name: "artifactName2",
                         path: "the/path/to/artifactName"
