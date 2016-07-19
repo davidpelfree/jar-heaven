@@ -11,7 +11,7 @@ _.each(conflictsJson.conflicts,function(conflictsType,conflictTypeName){
         issues += "<div>";
         _.each(conflict[conflictName],function(detail) {
             _.each(detail,function(detailValue,detailName) {
-                detailName = detailName.replace("_"," ")
+                detailName = (""+detailName).replace("_"," ")
                 issues += "<p><b>"+detailName+":</b> "+detailValue+"</p>";
             })
         })
