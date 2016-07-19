@@ -1,3 +1,12 @@
+var dataPoints = [];
+
+function strip(html){
+    var div = document.createElement("div");
+    div.innerHTML = html;
+    var text = div.textContent || div.innerText || "";
+    return text+" ";
+}
+
 $(document).ready(function() {
 _.each(conflictsJson.conflicts,function(conflictsType,conflictTypeName){
 
@@ -12,13 +21,14 @@ _.each(conflictsJson.conflicts,function(conflictsType,conflictTypeName){
         _.each(conflict["listOfPairs"],function(detail) {
             _.each(detail,function(detailValue,detailName) {
                 detailName = (""+detailName).replace("_"," ")
-                issues += "<p><b>"+detailName+":</b> "+detailValue+"</p>";
+                issues += "<p><b> "+detailName+" : </b> "+detailValue+";</p>";
             })
         })
         issues += "</div>";
-        tRow += "<td>"+conflict["listOfPairs"].length+"</td>";
+        var length = conflict["listOfPairs"].length;
+        tRow += "<td>"+ length+"</td>";
         tRow += "<td>"+issues+"</td>";
-
+        dataPoints.push({  y: length, legendText:strip(conflictName)+"("+strip(conflictTypeName)+")", label: strip(issues) });
         $("table tbody").append("<tr>"+tRow+"</tr>");
     })
 })

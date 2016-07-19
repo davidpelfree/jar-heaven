@@ -8,6 +8,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
     <script type="text/javascript" src="./conflictsData.js"></script>
+    <script type="text/javascript" src="./canvas.js"></script>
 
 
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" integrity="sha384-XXXXXXXX"
@@ -48,5 +49,73 @@
 
     </tbody>
 </table>
+
+
+
+<div id="chartContainer" style="height: 600px; width: 100%;"></div>
+<script type="text/javascript">
+    window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer",
+                {
+                    title:{
+                        text: "Jar Conflicts Statistics"
+                    },
+                    animationEnabled: true,
+                    legend:{
+                        verticalAlign: "center",
+                        horizontalAlign: "left",
+                        fontSize: 20,
+                        fontFamily: "Helvetica"
+                    },
+                    theme: "theme2",
+                    data: [
+                        {
+                            type: "pie",
+                            indexLabelFontFamily: "Garamond",
+                            indexLabelFontSize: 20,
+                            indexLabel: "{label} {y}%",
+                            startAngle:-20,
+                            showInLegend: true,
+                            toolTipContent:"{legendText} {y}%",
+                            dataPoints: dataPoints
+                        }
+                    ]
+                });
+        chart.render();
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-var conflictsJson = {conflicts:{"artifacts":[{"artifactName":"log4j:log4j","listOfPairs":[{"version":"1.2.9","path":"com.my:artifact:1.0/log4j:log4j:1.2.9"}]}],"classes":[{"className":"org.apache.log4j.Logger","listOfPairs":[{"artifact_name":"log4j:log4j:1.2.9","artifactPath":"com.my:artifact:1.0/log4j:log4j:1.2.9"},{"artifact_name":"log4j:log4j:1.2.9","artifactPath":"com.my:artifact:1.0/log4j:log4j:1.2.9"}]},{"className":"org.apache.log4j.MDC","listOfPairs":[{"artifact_name":"log4j:log4j:1.2.9","artifactPath":"com.my:artifact:1.0/log4j:log4j:1.2.9"}]}]}}
-=======
+
 var conflictsJson = {
     "conflicts": {
 
@@ -222,4 +220,3 @@ var conflictsJson = {
     }
 
 }
->>>>>>> f32763e5a71f4818efd06f9937d552195e4a83db
