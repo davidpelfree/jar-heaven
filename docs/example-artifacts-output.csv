@@ -1,0 +1,4 @@
+MVN_ARTIFACT_NAME,MVN_ARTIFACT_VERSION,MVN_ARTIFACT_PATH
+log4j:log4j,1.2.9,com.my:artifact:1.0/log4j:log4j:1.2.9
+org.apache.ant:ant,1.9.7,com.my:artifact:1.0/org.apache.ant:ant:1.9.7
+org.apache.ant:ant,1.6.0,com.my:artifact:1.0/com.3rdParty:jarFromHell:1.1/org.apache.ant:ant:1.6.0
